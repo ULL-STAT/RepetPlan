@@ -10,9 +10,9 @@ README
 [![License:
 MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://cran.r-project.org/web/licenses/MIT)
 [![GitHub
-release](https://img.shields.io/github/release/cpgonzal/RepetPlan.svg)](https://GitHub.com/cpgonzal/RepetPlan/releases/)
+release](https://img.shields.io/github/release/ULL-STAT/RepetPlan.svg)](https://gitHub.com/ULL-STAT/RepetPlan/releases/)
 [![Github all
-releases](https://img.shields.io/github/downloads/cpgonzal/RepetPlan/total.svg)](https://GitHub.com/cpgonzal/RepetPlan/releases/)
+releases](https://img.shields.io/github/downloads/ULL-STAT/RepetPlan/total.svg)](https://gitHub.com/ULL-STAT/RepetPlan/releases/)
 <!-- badges: end -->
 
 RepetPlan is an R package developed to obtain failured-censored
@@ -84,10 +84,10 @@ termcd
 message
 </th>
 <th style="text-align:right;">
-p\_alpha
+p_alpha
 </th>
 <th style="text-align:right;">
-p\_beta
+p_beta
 </th>
 <th style="text-align:left;">
 dist
@@ -99,19 +99,19 @@ alpha
 beta
 </th>
 <th style="text-align:right;">
-asn\_alpha
+asn_alpha
 </th>
 <th style="text-align:right;">
-asn\_beta
+asn_beta
 </th>
 <th style="text-align:right;">
-asn\_avg
+asn_avg
 </th>
 <th style="text-align:right;">
-p\_asn\_max
+p_asn_max
 </th>
 <th style="text-align:right;">
-asn\_max
+asn_max
 </th>
 </tr>
 </thead>
@@ -449,10 +449,10 @@ termcd
 message
 </th>
 <th style="text-align:right;">
-p\_alpha
+p_alpha
 </th>
 <th style="text-align:right;">
-p\_beta
+p_beta
 </th>
 <th style="text-align:left;">
 dist
@@ -464,19 +464,19 @@ alpha
 beta
 </th>
 <th style="text-align:right;">
-asn\_alpha
+asn_alpha
 </th>
 <th style="text-align:right;">
-asn\_beta
+asn_beta
 </th>
 <th style="text-align:right;">
-asn\_avg
+asn_avg
 </th>
 <th style="text-align:right;">
-p\_asn\_max
+p_asn_max
 </th>
 <th style="text-align:right;">
-asn\_max
+asn_max
 </th>
 </tr>
 </thead>
@@ -568,10 +568,10 @@ q
 n
 </th>
 <th style="text-align:right;">
-n\_low
+n_low
 </th>
 <th style="text-align:right;">
-n\_up
+n_up
 </th>
 <th style="text-align:right;">
 kr
@@ -586,10 +586,10 @@ termcd
 message
 </th>
 <th style="text-align:right;">
-p\_alpha
+p_alpha
 </th>
 <th style="text-align:right;">
-p\_beta
+p_beta
 </th>
 <th style="text-align:right;">
 a
@@ -604,10 +604,10 @@ l
 u
 </th>
 <th style="text-align:right;">
-mean\_p
+mean_p
 </th>
 <th style="text-align:right;">
-var\_p
+var_p
 </th>
 <th style="text-align:left;">
 dist
@@ -619,22 +619,22 @@ alpha
 beta
 </th>
 <th style="text-align:right;">
-asn\_alpha
+asn_alpha
 </th>
 <th style="text-align:right;">
-asn\_beta
+asn_beta
 </th>
 <th style="text-align:right;">
-asn\_avg
+asn_avg
 </th>
 <th style="text-align:right;">
 easn
 </th>
 <th style="text-align:right;">
-p\_asn\_max
+p_asn_max
 </th>
 <th style="text-align:right;">
-asn\_max
+asn_max
 </th>
 </tr>
 </thead>
@@ -1125,10 +1125,10 @@ q
 n
 </th>
 <th style="text-align:right;">
-n\_low
+n_low
 </th>
 <th style="text-align:right;">
-n\_up
+n_up
 </th>
 <th style="text-align:right;">
 kr
@@ -1143,10 +1143,10 @@ termcd
 message
 </th>
 <th style="text-align:right;">
-p\_alpha
+p_alpha
 </th>
 <th style="text-align:right;">
-p\_beta
+p_beta
 </th>
 <th style="text-align:right;">
 a
@@ -1161,10 +1161,10 @@ l
 u
 </th>
 <th style="text-align:right;">
-mean\_p
+mean_p
 </th>
 <th style="text-align:right;">
-var\_p
+var_p
 </th>
 <th style="text-align:left;">
 dist
@@ -1176,25 +1176,25 @@ alpha
 beta
 </th>
 <th style="text-align:right;">
-asn\_alpha
+asn_alpha
 </th>
 <th style="text-align:right;">
-asn\_beta
+asn_beta
 </th>
 <th style="text-align:right;">
-asn\_avg
+asn_avg
 </th>
 <th style="text-align:right;">
 easn
 </th>
 <th style="text-align:right;">
-p\_asn\_max
+p_asn_max
 </th>
 <th style="text-align:right;">
-asn\_max
+asn_max
 </th>
 <th style="text-align:right;">
-easn\_min
+easn_min
 </th>
 </tr>
 </thead>
