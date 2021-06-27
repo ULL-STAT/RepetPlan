@@ -1,0 +1,132 @@
+---
+title: "README"
+output: github_document
+always_allow_html: true
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  collapse = FALSE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# RepetPlan
+
+<!-- badges: start -->
+[![License:
+MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://cran.r-project.org/web/licenses/MIT)
+[![GitHub
+release](https://img.shields.io/github/release/cpgonzal/RepetPlan.svg)](https://GitHub.com/cpgonzal/RepetPlan/releases/)
+[![Github all
+releases](https://img.shields.io/github/downloads/cpgonzal/RepetPlan/total.svg)](https://GitHub.com/cpgonzal/RepetPlan/releases/)
+<!-- badges: end -->
+
+RepetPlan is an R package developed to obtain failured-censored repetitive group sampling plans. 
+
+## Installation
+
+To install the current version of the code from GitHub:
+``` r
+if(!require(devtools)){install.packages("devtools")}  #install if needed
+devtools::install_github("ULL-STAT/RepetPlan")
+```
+
+## Load and Help
+
+To load the RepetPlan package: 
+```{r load, message=FALSE,warning=FALSE}
+# load library and dependant libraries 
+library(RepetPlan)
+```
+
+To see all available functions in the package use the command below
+```{r help, echo=TRUE,eval=FALSE}
+# To get index of help on all functions
+help(package="RepetPlan")
+```
+
+
+## Examples
+
+### Design of repetitive group sampling plans using conventional sampling risks
+
+Suppose that $T$ represents a lifetime variable and $X=\log(T)$ follows a log-location and scale distribution.
+This is an example which shows how to determine the designs of **conventional** censored repetitive sampling plans for the given requirements of maximum risks and quality levels
+```{r exem01a, eval=TRUE,results = "hide"}
+risks<-c(0.05,0.10)     #vector of producer and consumer maximum sampling risks
+p<-c(0.00654, 0.0426)   #vector of acceptance and rejection quality levels
+q<- 0.1                 #censoring degree
+asvar<-asympt.var(q,"normal")    #asymptotical variance-covariance matrix of MLE estimators of location and scale paramters
+designs<-rep.plan(risks,p,asvar) #designs satisfying the previous requirements
+```
+
+The first designs returned by the function *rep.plan()* are
+```{r exem01b, echo=FALSE, message=FALSE,warning=FALSE}
+library(dplyr)
+library(kableExtra)
+kbl(head(designs)) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"))
+
+```
+
+The $ASN_{avg}$-optimal design can be obtained as
+```{r exem02a, echo=TRUE, message=FALSE,warning=FALSE}
+optimal.design<-designs %>% group_by(q,dist,p_alpha,p_beta) %>%
+  filter( (abs(alpha-risks[1])<1e-05) & (abs(risks[2]-beta)<1e-05) & (termcd==1)) %>%
+  slice(which.min(asn_avg)) %>% arrange(q,p_alpha,p_beta) %>% as.data.frame()
+```
+
+```{r exem02b, echo=FALSE, message=FALSE,warning=FALSE}
+kbl(optimal.design) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"))
+
+```
+
+
+### Design of repetitive group sampling plans using a generalized beta (GB) prior model of $p$ and expected sampling risks
+
+In this case, the censored repetitive sampling plans can be determined when a $GB$ prior is assumed and there is a knowledge about the mean and variance of $p$. For given requirements of maximum expected risks and quality levels, the sampling plans are
+```{r exem03a, eval=TRUE,results = "hide"}
+risks<-c(0.05,0.10)     #vector of producer and consumer maximum sampling risks
+p<-c(0.00654, 0.0426)   #vector of acceptance and rejection quality levels
+q<- 0.1                 #censoring degree
+asvar<-asympt.var(q,"normal")    #asymptotical variance-covariance matrix of MLE estimators of location and scale paramters
+l<- p[1]/5              #lower limit of p
+u<- p[2]+(p[1]-l)       #upper limit of p
+
+# GB parameters for a knowledge of mean and variance of p distribution
+know_p<-list(mean_p=p[1],var_p=((p[2]-p[1])/4)^2)
+beta.parms<-beta.params(p,l,u, know_p)
+
+designs<-repGBprior.plan(risks,p,asvar, beta.parms)
+```
+
+
+Then, the function *repGBprior.plan()* returns these designs. The first plans are
+```{r exem03b, echo=FALSE, message=FALSE,warning=FALSE}
+kbl(head(designs)) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"))
+
+```
+
+and the $EASN$-optimal design is obtained as
+```{r exem04a, echo=TRUE, message=FALSE,warning=FALSE}
+optimal.design<-designs %>% group_by(q,dist,p_alpha,p_beta) %>%
+                 filter( (abs(alpha-risks[1])<1e-05) & 
+                           (abs(risks[2]-beta)<1e-05) & (termcd==1)) %>%
+                 group_by(q,p_alpha,p_beta,a,b,l,u,dist) %>%
+                 mutate(easn_min=min(easn)) %>%
+                 slice(which.min(easn)) %>% as.data.frame()
+```
+
+```{r exem04b, echo=FALSE, message=FALSE,warning=FALSE}
+kbl(optimal.design) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"))
+
+```
