@@ -22,9 +22,9 @@ knitr::opts_chunk$set(
 [![License:
 MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://cran.r-project.org/web/licenses/MIT)
 [![GitHub
-release](https://img.shields.io/github/release/cpgonzal/RepetPlan.svg)](https://GitHub.com/cpgonzal/RepetPlan/releases/)
+release](https://img.shields.io/github/release/cpgonzal/RepetPlan.svg)](https://gitHub.com/ULL-STAT/RepetPlan/releases/)
 [![Github all
-releases](https://img.shields.io/github/downloads/cpgonzal/RepetPlan/total.svg)](https://GitHub.com/cpgonzal/RepetPlan/releases/)
+releases](https://img.shields.io/github/downloads/cpgonzal/RepetPlan/total.svg)](https://gitHub.com/ULL-STAT/RepetPlan/releases/)
 <!-- badges: end -->
 
 RepetPlan is an R package developed to obtain failured-censored repetitive group sampling plans. 
