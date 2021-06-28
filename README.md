@@ -14,7 +14,7 @@ release](https://img.shields.io/github/release/ULL-STAT/RepetPlan.svg)](https://
 [![Github all
 releases](https://img.shields.io/github/downloads/ULL-STAT/RepetPlan/total.svg)](https://gitHub.com/ULL-STAT/RepetPlan/releases/)
 
-[![DOI](https://zenodo.org/badge/380837603.svg)](https://zenodo.org/badge/latestdoi/380837603)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5035753.svg)](https://doi.org/10.5281/zenodo.5035753)
 <!-- badges: end -->
 
 RepetPlan is an R package developed to obtain failured-censored
@@ -22,7 +22,7 @@ repetitive group sampling plans.
 
 # Important note
 
-THE GITHUB REPO IS ANONYMIZED UNTIL FINISHING REVIEWING PROCESS. 
+THE GITHUB REPO IS ANONYMIZED UNTIL FINISHING REVIEWING PROCESS OF PAPER. THE R CODE IS ALSO AVAILABLE IN ZENODO REPOSITORY FOR INSTALLATION (https://zenodo.org/badge/latestdoi/380837603). 
 
 ## Installation
 
