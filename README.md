@@ -13,10 +13,16 @@ MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://cran.r-project.
 release](https://img.shields.io/github/release/ULL-STAT/RepetPlan.svg)](https://gitHub.com/ULL-STAT/RepetPlan/releases/)
 [![Github all
 releases](https://img.shields.io/github/downloads/ULL-STAT/RepetPlan/total.svg)](https://gitHub.com/ULL-STAT/RepetPlan/releases/)
+
+[![DOI](https://zenodo.org/badge/380837603.svg)](https://zenodo.org/badge/latestdoi/380837603)
 <!-- badges: end -->
 
 RepetPlan is an R package developed to obtain failured-censored
 repetitive group sampling plans.
+
+# Important note
+
+THE GITHUB REPO IS ANONYMIZED UNTIL FINISHING REVIEWING PROCESS. 
 
 ## Installation
 
