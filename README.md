@@ -26,6 +26,17 @@ THE GITHUB REPO IS ANONYMIZED UNTIL FINISHING REVIEWING PROCESS OF PAPER. THE R 
 
 ## Installation
 
+To install the current version of the code from Zenodo:
+``` r
+if(!require(zen4r)){install.packages("zen4r")}  #install if needed
+zen4r::download_zenodo("10.5281/zenodo.5035753")
+if(.Platform$OS.type=="windows") {
+  install.packages("RepetPlan-1.0.1.9000.zip", repos = NULL) 
+} else {
+  install.packages("RepetPlan-1.0.1.9000.tar.gz", repos = NULL)
+}
+```
+
 To install the current version of the code from GitHub:
 
 ``` r
