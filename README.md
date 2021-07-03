@@ -554,7 +554,7 @@ normal
 ### Design of repetitive group sampling plans using a generalized beta (GB) prior model of *p* and expected sampling risks
 
 In this case, the censored repetitive sampling plans can be determined
-when a *GB* prior is assumed and there is a knowledge about the mean
+when a *GB* prior is assumed and there is available knowledge about the mean
 and variance of *p*. For given requirements of maximum expected risks
 and quality levels, the sampling plans are
 
