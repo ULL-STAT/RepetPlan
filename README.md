@@ -25,12 +25,8 @@ RepetPlan is an R package developed to obtain failured-censored repetitive group
 To install the current version of the code from Zenodo:
 ``` r
 if(!require(zen4r)){install.packages("zen4r")}  #install if needed
-zen4r::download_zenodo("10.5281/zenodo.5035753")
-if(.Platform$OS.type=="windows") {
-  install.packages("RepetPlan-1.0.1.9000.zip", repos = NULL) 
-} else {
-  install.packages("RepetPlan-1.0.1.9000.tar.gz", repos = NULL)
-}
+zen4r::download_zenodo("10.5281/zenodo.5068961")
+install.packages("RepetPlan-1.0.3.zip", repos = NULL) 
 ```
 
 To install the current version of the code from GitHub:
