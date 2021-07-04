@@ -1,7 +1,7 @@
 README
 ================
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- README.md is generated from README.Rmd. Please edit that file --->
 
 # RepetPlan
 
@@ -17,8 +17,7 @@ releases](https://img.shields.io/github/downloads/ULL-STAT/RepetPlan/total.svg)]
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5035780.svg)](https://doi.org/10.5281/zenodo.5035780)
 <!-- badges: end -->
 
-RepetPlan is an R package developed to obtain failured-censored
-repetitive group sampling plans.
+RepetPlan is an R package developed to obtain failured-censored repetitive group sampling plans.
 
 
 ## Installation
